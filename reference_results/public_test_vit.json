@@ -1,0 +1,213 @@
+{
+  "protocol": {
+    "evaluated_at_utc": "2026-08-20T01:22:58.040156+00:00",
+    "lock_sha256": "9c11f729dc91e9db28f9794db0688a73830d80fcd4e1fe409fe97e6d1cde50aa",
+    "seed": 42,
+    "folds": 5,
+    "ensemble": "mean of five fold softmax probability vectors",
+    "test_samples": 300,
+    "selection_used_train_only_oof": true,
+    "test_results_must_not_change_triplet_hyperparameters": true
+  },
+  "locked_config": {
+    "lock_status": "FROZEN_BEFORE_FINAL_TEST",
+    "model": "timm/vit_small_patch16_224",
+    "seed": 42,
+    "final_folds": 5,
+    "paired_conditions": {
+      "ce_vit": {
+        "lambda_triplet": 0.0
+      },
+      "triplet_vit": {
+        "lambda_triplet": 0.0025
+      }
+    },
+    "lambda_ordinal": 0.0,
+    "mining_mode": "semi-hard",
+    "distance": "cosine distance on L2-normalized embeddings",
+    "embedding_head": "shared",
+    "embedding_source": "ViT pre-logits",
+    "embedding_dim": 384,
+    "adjacent_margin": 0.1,
+    "far_margin": 0.1,
+    "classes_per_batch": 3,
+    "samples_per_class": 8,
+    "epochs": 20,
+    "optimizer": "adamw",
+    "backbone_lr": 3e-05,
+    "head_lr_multiplier": 10.0,
+    "weight_decay": 0.01,
+    "warmup_epochs": 2,
+    "scheduler": "cosine",
+    "early_stopping": false,
+    "checkpoint_rule": "maximize validation macro-F1; tie: lower total loss",
+    "augmentation": "paper",
+    "triplet_ce_only_epochs": 0,
+    "triplet_ramp_epochs": 0,
+    "ensemble_rule": "mean of five fold softmax probability vectors",
+    "primary_metric": "macro_f1",
+    "safety_metrics": [
+      "c_recall",
+      "c_precision",
+      "c_specificity",
+      "c_to_a",
+      "c_to_b"
+    ],
+    "test_policy": "One locked evaluation event; no hyperparameter changes from test results"
+  },
+  "ce_vit": {
+    "evaluated_samples": 300,
+    "accuracy": 0.73,
+    "macro_f1": 0.7302168918311741,
+    "c_recall": 0.82,
+    "c_precision": 0.845360824742268,
+    "c_specificity": 0.925,
+    "c_to_a": 4,
+    "c_to_b": 14,
+    "a_to_c": 0,
+    "severe_a_c_errors": 4,
+    "ordinal_mae": 0.2833333333333333,
+    "quadratic_weighted_kappa": 0.7680798004987531,
+    "roc_auc_ovr": {
+      "A": 0.8983500000000001,
+      "B": 0.7894,
+      "C": 0.9488000000000001
+    },
+    "confusion_matrix": [
+      [
+        76,
+        24,
+        0
+      ],
+      [
+        24,
+        61,
+        15
+      ],
+      [
+        4,
+        14,
+        82
+      ]
+    ],
+    "per_class_precision": {
+      "A": 0.7307692307692307,
+      "B": 0.6161616161616161,
+      "C": 0.845360824742268
+    },
+    "per_class_recall": {
+      "A": 0.76,
+      "B": 0.61,
+      "C": 0.82
+    },
+    "per_class_f1": {
+      "A": 0.7450980392156863,
+      "B": 0.6130653266331658,
+      "C": 0.8324873096446701
+    },
+    "per_class_support": {
+      "A": 100,
+      "B": 100,
+      "C": 100
+    }
+  },
+  "triplet_vit": {
+    "evaluated_samples": 300,
+    "accuracy": 0.7133333333333334,
+    "macro_f1": 0.7151313008056777,
+    "c_recall": 0.79,
+    "c_precision": 0.8681318681318682,
+    "c_specificity": 0.94,
+    "c_to_a": 5,
+    "c_to_b": 16,
+    "a_to_c": 0,
+    "severe_a_c_errors": 5,
+    "ordinal_mae": 0.30333333333333334,
+    "quadratic_weighted_kappa": 0.7468671679197996,
+    "roc_auc_ovr": {
+      "A": 0.8945,
+      "B": 0.7909,
+      "C": 0.948
+    },
+    "confusion_matrix": [
+      [
+        75,
+        25,
+        0
+      ],
+      [
+        28,
+        60,
+        12
+      ],
+      [
+        5,
+        16,
+        79
+      ]
+    ],
+    "per_class_precision": {
+      "A": 0.6944444444444444,
+      "B": 0.594059405940594,
+      "C": 0.8681318681318682
+    },
+    "per_class_recall": {
+      "A": 0.75,
+      "B": 0.6,
+      "C": 0.79
+    },
+    "per_class_f1": {
+      "A": 0.7211538461538461,
+      "B": 0.5970149253731343,
+      "C": 0.8272251308900523
+    },
+    "per_class_support": {
+      "A": 100,
+      "B": 100,
+      "C": 100
+    }
+  },
+  "delta_triplet_minus_ce": {
+    "accuracy": -0.016666666666666607,
+    "macro_f1": -0.015085591025496448,
+    "c_recall": -0.029999999999999916,
+    "c_precision": 0.02277104338960012,
+    "c_specificity": 0.014999999999999902,
+    "c_to_a": 1,
+    "c_to_b": 2,
+    "a_to_c": 0,
+    "severe_a_c_errors": 1,
+    "ordinal_mae": 0.020000000000000018,
+    "quadratic_weighted_kappa": -0.02121263257895356
+  },
+  "inference": {
+    "paired_bootstrap": {
+      "replicates": 10000,
+      "seed": 20260820,
+      "accuracy_delta": {
+        "mean": -0.016502,
+        "ci95_lower": -0.043333333333333335,
+        "ci95_upper": 0.010000000000000009,
+        "probability_positive": 0.077
+      },
+      "macro_f1_delta": {
+        "mean": -0.014932239602500471,
+        "ci95_lower": -0.04106193114019493,
+        "ci95_upper": 0.011190575968000844,
+        "probability_positive": 0.1266
+      }
+    },
+    "mcnemar": {
+      "ce_correct_triplet_wrong": 10,
+      "ce_wrong_triplet_correct": 5,
+      "discordant_total": 15,
+      "exact_two_sided_p": 0.3017578125
+    }
+  },
+  "safety_checks": {
+    "c_specificity_at_least_90_percent": true,
+    "c_recall_drop_no_more_than_2pp": false,
+    "c_precision_drop_no_more_than_3pp": true
+  },
+  "test_status": "FINAL_LOCKED_EVALUATION_COMPLETED"
+}

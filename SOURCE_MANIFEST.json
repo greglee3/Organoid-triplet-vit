@@ -1,0 +1,139 @@
+{
+  "retrieved_on": "2026-09-22",
+  "scope": "Current server files, not a historical git commit attestation.",
+  "files": [
+    {
+      "path": "asano_data.py",
+      "source_relative_path": "asano_data.py",
+      "source_sha256": "c024b566c73c3ad5239fccf7d386dcedbe8e67851f4de09d4171fcae362c29e8",
+      "packaged_sha256": "c024b566c73c3ad5239fccf7d386dcedbe8e67851f4de09d4171fcae362c29e8",
+      "packaged_lf_sha256": "c024b566c73c3ad5239fccf7d386dcedbe8e67851f4de09d4171fcae362c29e8"
+    },
+    {
+      "path": "paper_reproduction.py",
+      "source_relative_path": "paper_reproduction.py",
+      "source_sha256": "dd3342e957dc5715f2023ad35d21b31b104d817d5c5bb3ec36451f5fd79859bb",
+      "packaged_sha256": "dd3342e957dc5715f2023ad35d21b31b104d817d5c5bb3ec36451f5fd79859bb",
+      "packaged_lf_sha256": "dd3342e957dc5715f2023ad35d21b31b104d817d5c5bb3ec36451f5fd79859bb"
+    },
+    {
+      "path": "training_common.py",
+      "source_relative_path": "training_common.py",
+      "source_sha256": "3772b93ebd6b794a83ebd5fdea39cdf895dbc81c541a007a419a8dd501cd5098",
+      "packaged_sha256": "3772b93ebd6b794a83ebd5fdea39cdf895dbc81c541a007a419a8dd501cd5098",
+      "packaged_lf_sha256": "3772b93ebd6b794a83ebd5fdea39cdf895dbc81c541a007a419a8dd501cd5098"
+    },
+    {
+      "path": "05_final_tuning/02_ordinal_aware_triplet/train_pilot.py",
+      "source_relative_path": "05_final_tuning/02_ordinal_aware_triplet/train_pilot.py",
+      "source_sha256": "440224281d06e42f4138b81068e2013bddac11eaf5f2f6db35127d1de8629287",
+      "packaged_sha256": "440224281d06e42f4138b81068e2013bddac11eaf5f2f6db35127d1de8629287",
+      "packaged_lf_sha256": "440224281d06e42f4138b81068e2013bddac11eaf5f2f6db35127d1de8629287"
+    },
+    {
+      "path": "05_final_tuning/02_ordinal_aware_triplet/projection_head.py",
+      "source_relative_path": "05_final_tuning/02_ordinal_aware_triplet/projection_head.py",
+      "source_sha256": "9e1d69a74b3732e930b275613605f87b59aa82c44b183042295c2a364a25ed6e",
+      "packaged_sha256": "9e1d69a74b3732e930b275613605f87b59aa82c44b183042295c2a364a25ed6e",
+      "packaged_lf_sha256": "9e1d69a74b3732e930b275613605f87b59aa82c44b183042295c2a364a25ed6e"
+    },
+    {
+      "path": "05_final_tuning/02_ordinal_aware_triplet/triplet_schedule.py",
+      "source_relative_path": "05_final_tuning/02_ordinal_aware_triplet/triplet_schedule.py",
+      "source_sha256": "89ec954ed6916de6ce2c2085a90cbbaf855bdc87a50155754361944fcac367f7",
+      "packaged_sha256": "89ec954ed6916de6ce2c2085a90cbbaf855bdc87a50155754361944fcac367f7",
+      "packaged_lf_sha256": "89ec954ed6916de6ce2c2085a90cbbaf855bdc87a50155754361944fcac367f7"
+    },
+    {
+      "path": "05_final_tuning/PROFESSOR_FEEDBACK/03_vit_triplet_efficientnet/train_efficientnet_oof.py",
+      "source_relative_path": "05_final_tuning/PROFESSOR_FEEDBACK/03_vit_triplet_efficientnet/train_efficientnet_oof.py",
+      "source_sha256": "45d6285c9e1e1aa498b8c2e2409340d1fab70ce75147eb27a0dfff5624d27c06",
+      "packaged_sha256": "45d6285c9e1e1aa498b8c2e2409340d1fab70ce75147eb27a0dfff5624d27c06",
+      "packaged_lf_sha256": "45d6285c9e1e1aa498b8c2e2409340d1fab70ce75147eb27a0dfff5624d27c06"
+    },
+    {
+      "path": "05_final_tuning/PROFESSOR_FEEDBACK/07_locked_triplet_final_test/LOCKED_CONFIG.json",
+      "source_relative_path": "05_final_tuning/PROFESSOR_FEEDBACK/07_locked_triplet_final_test/LOCKED_CONFIG.json",
+      "source_sha256": "9c11f729dc91e9db28f9794db0688a73830d80fcd4e1fe409fe97e6d1cde50aa",
+      "packaged_sha256": "9c11f729dc91e9db28f9794db0688a73830d80fcd4e1fe409fe97e6d1cde50aa",
+      "packaged_lf_sha256": "9c11f729dc91e9db28f9794db0688a73830d80fcd4e1fe409fe97e6d1cde50aa"
+    },
+    {
+      "path": "05_final_tuning/PROFESSOR_FEEDBACK/07_locked_triplet_final_test/evaluate_locked_test_once.py",
+      "source_relative_path": "05_final_tuning/PROFESSOR_FEEDBACK/07_locked_triplet_final_test/evaluate_locked_test_once.py",
+      "source_sha256": "5bcef3de5da587b69c5221415467671cc7b091abd622f2c79e551412fc51d146",
+      "packaged_sha256": "5bcef3de5da587b69c5221415467671cc7b091abd622f2c79e551412fc51d146",
+      "packaged_lf_sha256": "5bcef3de5da587b69c5221415467671cc7b091abd622f2c79e551412fc51d146"
+    },
+    {
+      "path": "05_final_tuning/PROFESSOR_FEEDBACK/07_locked_triplet_final_test/run_locked_training_and_test.sh",
+      "source_relative_path": "05_final_tuning/PROFESSOR_FEEDBACK/07_locked_triplet_final_test/run_locked_training_and_test.sh",
+      "source_sha256": "b6ae74e3884fdc24d42bc7afb286377b3fa0bbf25721c6e5d75d13f22c0d1c80",
+      "packaged_sha256": "b6ae74e3884fdc24d42bc7afb286377b3fa0bbf25721c6e5d75d13f22c0d1c80",
+      "packaged_lf_sha256": "b6ae74e3884fdc24d42bc7afb286377b3fa0bbf25721c6e5d75d13f22c0d1c80"
+    },
+    {
+      "path": "05_final_tuning/PROFESSOR_FEEDBACK/11_locked_triplet_notebook_eff_final_test/lock_ensemble.py",
+      "source_relative_path": "05_final_tuning/PROFESSOR_FEEDBACK/11_locked_triplet_notebook_eff_final_test/lock_ensemble.py",
+      "source_sha256": "59f9066dc7149367a37e08ad07e3c88bd11ddb7c2901f48b6c528bf4aa37dd5a",
+      "packaged_sha256": "59f9066dc7149367a37e08ad07e3c88bd11ddb7c2901f48b6c528bf4aa37dd5a",
+      "packaged_lf_sha256": "59f9066dc7149367a37e08ad07e3c88bd11ddb7c2901f48b6c528bf4aa37dd5a"
+    },
+    {
+      "path": "05_final_tuning/PROFESSOR_FEEDBACK/11_locked_triplet_notebook_eff_final_test/evaluate_ensemble_test_once.py",
+      "source_relative_path": "05_final_tuning/PROFESSOR_FEEDBACK/11_locked_triplet_notebook_eff_final_test/evaluate_ensemble_test_once.py",
+      "source_sha256": "845b6c7055c2592cb1d4c1ca5b4fa2ff4c7a072d116d54614462e5246e0b5c11",
+      "packaged_sha256": "845b6c7055c2592cb1d4c1ca5b4fa2ff4c7a072d116d54614462e5246e0b5c11",
+      "packaged_lf_sha256": "845b6c7055c2592cb1d4c1ca5b4fa2ff4c7a072d116d54614462e5246e0b5c11"
+    },
+    {
+      "path": "05_final_tuning/PROFESSOR_FEEDBACK/11_locked_triplet_notebook_eff_final_test/run_locked_training_and_test.sh",
+      "source_relative_path": "05_final_tuning/PROFESSOR_FEEDBACK/11_locked_triplet_notebook_eff_final_test/run_locked_training_and_test.sh",
+      "source_sha256": "94ba6754273ba3cd54380329ee259a4115087add168ee80d093dd318284c2e83",
+      "packaged_sha256": "6592ec2aab83075f33d90675bda899dd3664a4be6c3827c6c35ea8a2cc191eca",
+      "packaged_lf_sha256": "6592ec2aab83075f33d90675bda899dd3664a4be6c3827c6c35ea8a2cc191eca"
+    },
+    {
+      "path": "05_final_tuning/PROFESSOR_FEEDBACK/14_ce_vs_triplet_confirmatory/run_confirmation.sh",
+      "source_relative_path": "05_final_tuning/PROFESSOR_FEEDBACK/14_ce_vs_triplet_confirmatory/run_confirmation.sh",
+      "source_sha256": "33b1b1378d03961ce5d746931d4a2c4b0ca0f4a6e7ad751ba5df3d1e2a803bac",
+      "packaged_sha256": "33b1b1378d03961ce5d746931d4a2c4b0ca0f4a6e7ad751ba5df3d1e2a803bac",
+      "packaged_lf_sha256": "33b1b1378d03961ce5d746931d4a2c4b0ca0f4a6e7ad751ba5df3d1e2a803bac"
+    },
+    {
+      "path": "05_final_tuning/PROFESSOR_FEEDBACK/14_ce_vs_triplet_confirmatory/summarize_confirmation.py",
+      "source_relative_path": "05_final_tuning/PROFESSOR_FEEDBACK/14_ce_vs_triplet_confirmatory/summarize_confirmation.py",
+      "source_sha256": "bc78d7549cef581f70333a1a0326d6163fbb0cc13838b0fed605c339695217f4",
+      "packaged_sha256": "bc78d7549cef581f70333a1a0326d6163fbb0cc13838b0fed605c339695217f4",
+      "packaged_lf_sha256": "bc78d7549cef581f70333a1a0326d6163fbb0cc13838b0fed605c339695217f4"
+    },
+    {
+      "path": "reference_results/public_test_vit.json",
+      "source_relative_path": "runs/05_final_tuning/PROFESSOR_FEEDBACK/07_locked_triplet_final_test/final_public_test/FINAL_TEST_RESULTS.json",
+      "source_sha256": "b75b9c664397e63ff641b270bbdb9bdd79f27832072de82dbf31e7f25564959c",
+      "packaged_sha256": "b75b9c664397e63ff641b270bbdb9bdd79f27832072de82dbf31e7f25564959c",
+      "packaged_lf_sha256": "b75b9c664397e63ff641b270bbdb9bdd79f27832072de82dbf31e7f25564959c"
+    },
+    {
+      "path": "reference_results/public_test_ensemble.json",
+      "source_relative_path": "runs/05_final_tuning/PROFESSOR_FEEDBACK/11_locked_triplet_notebook_eff_final_test/final_public_test/FINAL_ENSEMBLE_TEST_RESULTS.json",
+      "source_sha256": "991676dab921cd6219347a1709054440647674f433d242cbbc86a86981c4fcf9",
+      "packaged_sha256": "991676dab921cd6219347a1709054440647674f433d242cbbc86a86981c4fcf9",
+      "packaged_lf_sha256": "991676dab921cd6219347a1709054440647674f433d242cbbc86a86981c4fcf9"
+    },
+    {
+      "path": "reference_results/multiseed_oof.json",
+      "source_relative_path": "runs/05_final_tuning/PROFESSOR_FEEDBACK/14_ce_vs_triplet_confirmatory/summary/CE_VS_TRIPLET_RESULTS.json",
+      "source_sha256": "b61f0a1278a5c1de4988c74597428f16b5aa992899dbe926d09b47c988517dfa",
+      "packaged_sha256": "b61f0a1278a5c1de4988c74597428f16b5aa992899dbe926d09b47c988517dfa",
+      "packaged_lf_sha256": "b61f0a1278a5c1de4988c74597428f16b5aa992899dbe926d09b47c988517dfa"
+    },
+    {
+      "path": "reference_results/seed42_folds.json",
+      "source_relative_path": "runs/05_final_tuning/PROFESSOR_FEEDBACK/07_locked_triplet_final_test/paired_seed_42_five_fold/folds.json",
+      "source_sha256": "8eb5be4745de59ea29f3f74946e3645c790564140467588a98e4a9c37e0d0453",
+      "packaged_sha256": "8eb5be4745de59ea29f3f74946e3645c790564140467588a98e4a9c37e0d0453",
+      "packaged_lf_sha256": "8eb5be4745de59ea29f3f74946e3645c790564140467588a98e4a9c37e0d0453"
+    }
+  ]
+}

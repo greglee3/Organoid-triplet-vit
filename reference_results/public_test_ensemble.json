@@ -1,0 +1,256 @@
+{
+  "protocol": {
+    "evaluated_at_utc": "2026-08-20T05:54:01.865456+00:00",
+    "ensemble_lock": "runs/05_final_tuning/PROFESSOR_FEEDBACK/11_locked_triplet_notebook_eff_final_test/ENSEMBLE_LOCK.json",
+    "ensemble_lock_sha256": "76569fb78a286819a4123e4a9e9b0c7c4b9d6cc575af7b4671325c45e6405be2",
+    "seed": 42,
+    "folds": 5,
+    "test_samples": 300,
+    "combination": "0.5 * Triplet-ViT softmax + 0.5 * Notebook-EfficientNet softmax",
+    "selection_used_train_only_oof": true,
+    "project_public_test_was_already_seen_for_triplet_vit": true,
+    "this_is_the_first_locked_test_of_this_specific_ensemble": true,
+    "test_results_must_not_change_this_ensemble": true
+  },
+  "models": {
+    "ce_vit_reference": {
+      "evaluated_samples": 300,
+      "accuracy": 0.73,
+      "macro_f1": 0.7302168918311741,
+      "per_class_precision": {
+        "A": 0.7307692307692307,
+        "B": 0.6161616161616161,
+        "C": 0.845360824742268
+      },
+      "per_class_recall": {
+        "A": 0.76,
+        "B": 0.61,
+        "C": 0.82
+      },
+      "per_class_f1": {
+        "A": 0.7450980392156863,
+        "B": 0.6130653266331658,
+        "C": 0.8324873096446701
+      },
+      "per_class_support": {
+        "A": 100,
+        "B": 100,
+        "C": 100
+      },
+      "c_recall": 0.82,
+      "c_precision": 0.845360824742268,
+      "c_specificity": 0.925,
+      "c_to_a": 4,
+      "c_to_b": 14,
+      "confusion_matrix": [
+        [
+          76,
+          24,
+          0
+        ],
+        [
+          24,
+          61,
+          15
+        ],
+        [
+          4,
+          14,
+          82
+        ]
+      ]
+    },
+    "triplet_vit": {
+      "evaluated_samples": 300,
+      "accuracy": 0.7133333333333334,
+      "macro_f1": 0.7151313008056777,
+      "per_class_precision": {
+        "A": 0.6944444444444444,
+        "B": 0.594059405940594,
+        "C": 0.8681318681318682
+      },
+      "per_class_recall": {
+        "A": 0.75,
+        "B": 0.6,
+        "C": 0.79
+      },
+      "per_class_f1": {
+        "A": 0.7211538461538461,
+        "B": 0.5970149253731343,
+        "C": 0.8272251308900523
+      },
+      "per_class_support": {
+        "A": 100,
+        "B": 100,
+        "C": 100
+      },
+      "c_recall": 0.79,
+      "c_precision": 0.8681318681318682,
+      "c_specificity": 0.94,
+      "c_to_a": 5,
+      "c_to_b": 16,
+      "confusion_matrix": [
+        [
+          75,
+          25,
+          0
+        ],
+        [
+          28,
+          60,
+          12
+        ],
+        [
+          5,
+          16,
+          79
+        ]
+      ]
+    },
+    "notebook_efficientnet": {
+      "evaluated_samples": 300,
+      "accuracy": 0.7366666666666667,
+      "macro_f1": 0.7260347597919291,
+      "per_class_precision": {
+        "A": 0.6910569105691057,
+        "B": 0.676056338028169,
+        "C": 0.8301886792452831
+      },
+      "per_class_recall": {
+        "A": 0.85,
+        "B": 0.48,
+        "C": 0.88
+      },
+      "per_class_f1": {
+        "A": 0.7623318385650224,
+        "B": 0.5614035087719298,
+        "C": 0.8543689320388349
+      },
+      "per_class_support": {
+        "A": 100,
+        "B": 100,
+        "C": 100
+      },
+      "c_recall": 0.88,
+      "c_precision": 0.8301886792452831,
+      "c_specificity": 0.91,
+      "c_to_a": 3,
+      "c_to_b": 9,
+      "confusion_matrix": [
+        [
+          85,
+          14,
+          1
+        ],
+        [
+          35,
+          48,
+          17
+        ],
+        [
+          3,
+          9,
+          88
+        ]
+      ]
+    },
+    "triplet_vit_notebook_efficientnet_50_50": {
+      "evaluated_samples": 300,
+      "accuracy": 0.73,
+      "macro_f1": 0.7269582960087589,
+      "per_class_precision": {
+        "A": 0.6982758620689655,
+        "B": 0.632183908045977,
+        "C": 0.8556701030927835
+      },
+      "per_class_recall": {
+        "A": 0.81,
+        "B": 0.55,
+        "C": 0.83
+      },
+      "per_class_f1": {
+        "A": 0.75,
+        "B": 0.5882352941176471,
+        "C": 0.8426395939086294
+      },
+      "per_class_support": {
+        "A": 100,
+        "B": 100,
+        "C": 100
+      },
+      "c_recall": 0.83,
+      "c_precision": 0.8556701030927835,
+      "c_specificity": 0.93,
+      "c_to_a": 4,
+      "c_to_b": 13,
+      "confusion_matrix": [
+        [
+          81,
+          19,
+          0
+        ],
+        [
+          31,
+          55,
+          14
+        ],
+        [
+          4,
+          13,
+          83
+        ]
+      ]
+    }
+  },
+  "inference": {
+    "ensemble_minus_triplet": {
+      "paired_bootstrap": {
+        "replicates": 10000,
+        "seed": 20260820,
+        "accuracy_delta": {
+          "mean": 0.016701,
+          "ci95_lower": -0.013333333333333308,
+          "ci95_upper": 0.046666666666666634,
+          "probability_positive": 0.8494
+        },
+        "macro_f1_delta": {
+          "mean": 0.011906121836115545,
+          "ci95_lower": -0.017225058671332553,
+          "ci95_upper": 0.04076762749798155,
+          "probability_positive": 0.789
+        }
+      },
+      "mcnemar": {
+        "reference_correct_candidate_wrong": 7,
+        "reference_wrong_candidate_correct": 12,
+        "discordant_total": 19,
+        "exact_two_sided_p": 0.359283447265625
+      }
+    },
+    "ensemble_minus_ce_vit": {
+      "paired_bootstrap": {
+        "replicates": 10000,
+        "seed": 20260820,
+        "accuracy_delta": {
+          "mean": 0.0001989999999999996,
+          "ci95_lower": -0.036666666666666625,
+          "ci95_upper": 0.036666666666666625,
+          "probability_positive": 0.4653
+        },
+        "macro_f1_delta": {
+          "mean": -0.0030261177663849274,
+          "ci95_lower": -0.039240462405883886,
+          "ci95_upper": 0.032963970231841666,
+          "probability_positive": 0.4315
+        }
+      },
+      "mcnemar": {
+        "reference_correct_candidate_wrong": 14,
+        "reference_wrong_candidate_correct": 14,
+        "discordant_total": 28,
+        "exact_two_sided_p": 1.0
+      }
+    }
+  },
+  "test_status": "FINAL_LOCKED_ENSEMBLE_EVALUATION_COMPLETED"
+}

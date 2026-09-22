@@ -1,0 +1,4 @@
+# Observed research-server PyTorch build. Linux CUDA 12.4 wheels.
+--index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
