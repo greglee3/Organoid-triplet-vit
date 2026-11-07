@@ -1,0 +1,122 @@
+{
+  "protocol": {
+    "seeds": [
+      70384,
+      12731,
+      76313,
+      98831,
+      80324
+    ],
+    "folds": 5,
+    "samples_per_seed": 1200,
+    "c_samples_per_seed": 400,
+    "comparison": "paired train-only OOF probabilities",
+    "target_specificities": [
+      0.9,
+      0.925,
+      0.928,
+      0.95
+    ],
+    "test_status": "NOT_ACCESSED"
+  },
+  "metrics": {
+    "roc_auc": {
+      "label": "C ROC-AUC",
+      "ce_mean": 0.92693375,
+      "ce_sd": 0.008399876010524651,
+      "triplet_mean": 0.92641375,
+      "triplet_sd": 0.008234899354746942,
+      "paired_delta_mean": -0.0005199999999999872,
+      "paired_delta_sd": 0.002130080782652374,
+      "paired_delta_95ci": [
+        -0.00316442061339055,
+        0.002124420613390576
+      ],
+      "triplet_seed_wins": 2
+    },
+    "average_precision": {
+      "label": "C average precision (PR-AUC)",
+      "ce_mean": 0.8910659087833295,
+      "ce_sd": 0.010647244557540196,
+      "triplet_mean": 0.8926594474151668,
+      "triplet_sd": 0.008250442550247634,
+      "paired_delta_mean": 0.001593538631837288,
+      "paired_delta_sd": 0.004291759546456731,
+      "paired_delta_95ci": [
+        -0.0037345303807538115,
+        0.006921607644428387
+      ],
+      "triplet_seed_wins": 4
+    },
+    "partial_auc_fpr_0p10": {
+      "label": "C standardized partial AUC (specificity >=90%)",
+      "ce_mean": 0.8264835526315789,
+      "ce_sd": 0.012666504878124873,
+      "triplet_mean": 0.8313881578947369,
+      "triplet_sd": 0.008331631975157119,
+      "paired_delta_mean": 0.004904605263157902,
+      "paired_delta_sd": 0.0059962941399164,
+      "paired_delta_95ci": [
+        -0.002539583688118955,
+        0.012348794214434758
+      ],
+      "triplet_seed_wins": 4
+    },
+    "recall_at_spec_0p900": {
+      "label": "C recall at specificity 90.0%",
+      "ce_mean": 0.827325,
+      "ce_sd": 0.02532131019516956,
+      "triplet_mean": 0.8339857142857142,
+      "triplet_sd": 0.015504896454312725,
+      "paired_delta_mean": 0.006660714285714265,
+      "paired_delta_sd": 0.012267699740216098,
+      "paired_delta_95ci": [
+        -0.008569204849802305,
+        0.021890633421230835
+      ],
+      "triplet_seed_wins": 3
+    },
+    "recall_at_spec_0p925": {
+      "label": "C recall at specificity 92.5%",
+      "ce_mean": 0.7884166666666665,
+      "ce_sd": 0.020829999733290628,
+      "triplet_mean": 0.8056833333333333,
+      "triplet_sd": 0.022007132682130323,
+      "paired_delta_mean": 0.01726666666666672,
+      "paired_delta_sd": 0.012978802161815867,
+      "paired_delta_95ci": [
+        0.0011539388051971175,
+        0.03337939452813632
+      ],
+      "triplet_seed_wins": 5
+    },
+    "recall_at_spec_0p928": {
+      "label": "C recall at specificity 92.8%",
+      "ce_mean": 0.7832880952380952,
+      "ce_sd": 0.019060714248537468,
+      "triplet_mean": 0.8020599999999999,
+      "triplet_sd": 0.02243586414649539,
+      "paired_delta_mean": 0.018771904761904667,
+      "paired_delta_sd": 0.013405201337633517,
+      "paired_delta_95ci": [
+        0.0021298172727401594,
+        0.03541399225106917
+      ],
+      "triplet_seed_wins": 5
+    },
+    "recall_at_spec_0p950": {
+      "label": "C recall at specificity 95.0%",
+      "ce_mean": 0.7175000000000004,
+      "ce_sd": 0.03288236609491453,
+      "triplet_mean": 0.7428333333333333,
+      "triplet_sd": 0.006396885092675113,
+      "paired_delta_mean": 0.025333333333333007,
+      "paired_delta_sd": 0.02879133501979732,
+      "paired_delta_95ci": [
+        -0.010410099701437005,
+        0.06107676636810302
+      ],
+      "triplet_seed_wins": 4
+    }
+  }
+}

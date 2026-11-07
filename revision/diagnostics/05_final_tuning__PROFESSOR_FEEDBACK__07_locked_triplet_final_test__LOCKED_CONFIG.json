@@ -1,0 +1,46 @@
+{
+  "lock_status": "FROZEN_BEFORE_FINAL_TEST",
+  "model": "timm/vit_small_patch16_224",
+  "seed": 42,
+  "final_folds": 5,
+  "paired_conditions": {
+    "ce_vit": {
+      "lambda_triplet": 0.0
+    },
+    "triplet_vit": {
+      "lambda_triplet": 0.0025
+    }
+  },
+  "lambda_ordinal": 0.0,
+  "mining_mode": "semi-hard",
+  "distance": "cosine distance on L2-normalized embeddings",
+  "embedding_head": "shared",
+  "embedding_source": "ViT pre-logits",
+  "embedding_dim": 384,
+  "adjacent_margin": 0.1,
+  "far_margin": 0.1,
+  "classes_per_batch": 3,
+  "samples_per_class": 8,
+  "epochs": 20,
+  "optimizer": "adamw",
+  "backbone_lr": 0.00003,
+  "head_lr_multiplier": 10.0,
+  "weight_decay": 0.01,
+  "warmup_epochs": 2,
+  "scheduler": "cosine",
+  "early_stopping": false,
+  "checkpoint_rule": "maximize validation macro-F1; tie: lower total loss",
+  "augmentation": "paper",
+  "triplet_ce_only_epochs": 0,
+  "triplet_ramp_epochs": 0,
+  "ensemble_rule": "mean of five fold softmax probability vectors",
+  "primary_metric": "macro_f1",
+  "safety_metrics": [
+    "c_recall",
+    "c_precision",
+    "c_specificity",
+    "c_to_a",
+    "c_to_b"
+  ],
+  "test_policy": "One locked evaluation event; no hyperparameter changes from test results"
+}

@@ -1,0 +1,312 @@
+{
+  "completed_utc": "2026-09-25T05:38:30.336643+00:00",
+  "protocol": {
+    "created_utc": "2026-09-25T04:57:58.144316+00:00",
+    "protocol": {
+      "models": [
+        "pixel_mlp",
+        "small_cnn"
+      ],
+      "seed": 42,
+      "epochs": 50,
+      "batch_size": 32,
+      "optimizer": "AdamW",
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "scheduler": "CosineAnnealingLR, T_max=50, eta_min=1e-6",
+      "criterion": "mean cross entropy; no weighting, triplet loss, ordinal penalty or label smoothing",
+      "checkpoint_selection": "minimum validation CE; ties retain earlier epoch",
+      "input": "RGB resized to 224x224 with torchvision PIL bilinear; fixed ImageNet mean/std",
+      "augmentation": "independent per-image horizontal and vertical flips, each p=0.5, training only",
+      "sampling": "random shuffle without replacement each epoch; no balanced sampler",
+      "initialization": "random, no pretraining for either model",
+      "pixel_mlp": "bilinear antialiased reduction to 64x64; flatten 12288; Linear 256, ReLU, Dropout .3; Linear 64, ReLU; Linear 3",
+      "small_cnn": "3 blocks (Conv3x3 pad1 bias=False, BatchNorm, ReLU, MaxPool2); channels16,32,64; AdaptiveAvgPool4x4; Flatten1024; Linear128, ReLU, Dropout .3; Linear3",
+      "folds": "exact existing seed42 image-level shuffled KFold, 960 train/240 validation",
+      "public_test": "300 original test images, once after all ten checkpoints selected; mean of 5 fold softmax vectors; argmax",
+      "scope": "Post-hoc reviewer-requested baselines; NOT a matched architecture-only ablation. Prior manuscript test results were already known. No hyperparameter search.",
+      "reporting": "report both prespecified models regardless of performance; train-only pooled OOF and public test reported separately",
+      "precision": "float32; deterministic algorithms; TF32 disabled on CUDA"
+    },
+    "trainer_sha256": "d66b360747b9da743692c85d286ca16ff4984f37f6989ab5d9d2b4f9f64c4db2",
+    "folds_sha256": "8eb5be4745de59ea29f3f74946e3645c790564140467588a98e4a9c37e0d0453",
+    "data_path": "${PROJECT_ROOT}/data/Asano_Full_Data.zip",
+    "data_size_bytes": 4798191187,
+    "versions": {
+      "torch": "2.6.0+cu124",
+      "numpy": "2.2.6"
+    },
+    "device": "cpu",
+    "cpu_threads": 8,
+    "gpu": null,
+    "cpu_reason": "GPU failed CUDA initialization during smoke check"
+  },
+  "models": {
+    "pixel_mlp": {
+      "oof": {
+        "n": 1200,
+        "accuracy": 0.61,
+        "macro_f1": 0.6050082229427386,
+        "c_recall": 0.7275,
+        "c_precision": 0.7423469387755102,
+        "c_specificity": 0.87375,
+        "c_f1": 0.7348484848484849,
+        "confusion_matrix": [
+          [
+            278,
+            98,
+            24
+          ],
+          [
+            160,
+            163,
+            77
+          ],
+          [
+            37,
+            72,
+            291
+          ]
+        ],
+        "per_class": {
+          "A": {
+            "precision": 0.5852631578947368,
+            "recall": 0.695,
+            "f1": 0.6354285714285715,
+            "support": 400,
+            "auc": 0.806246875
+          },
+          "B": {
+            "precision": 0.4894894894894895,
+            "recall": 0.4075,
+            "f1": 0.44474761255115963,
+            "support": 400,
+            "auc": 0.67690625
+          },
+          "C": {
+            "precision": 0.7423469387755102,
+            "recall": 0.7275,
+            "f1": 0.7348484848484849,
+            "support": 400,
+            "auc": 0.8773562500000001
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "fold": 1,
+          "best_epoch": 39,
+          "validation_loss": 0.7620875159899394,
+          "checkpoint_sha256": "58a9dac78f0d190a208ca2d16793e9fbfa73f8aca09343130f4fa5fc7e0465e0"
+        },
+        {
+          "fold": 2,
+          "best_epoch": 32,
+          "validation_loss": 0.8478852113087972,
+          "checkpoint_sha256": "a7c34da88d6625266fbba248661365ea485ac02b05210c186a490e7f3d620b25"
+        },
+        {
+          "fold": 3,
+          "best_epoch": 46,
+          "validation_loss": 0.7587601880232493,
+          "checkpoint_sha256": "48501259a690d8ad6d929677ea28affb117b9b0a01e1452aa50e60fad5f86258"
+        },
+        {
+          "fold": 4,
+          "best_epoch": 35,
+          "validation_loss": 0.8652125875155131,
+          "checkpoint_sha256": "d71f66edcf843d29e76f9961809f330c08235d66fd7ed4db87f65c77c2845bee"
+        },
+        {
+          "fold": 5,
+          "best_epoch": 41,
+          "validation_loss": 0.8831506411234538,
+          "checkpoint_sha256": "12d5de460dee8d94a5672af91d0fbdff57f1f12d07fcfc82ff0754ff4f2d9de3"
+        }
+      ],
+      "parameters": 3162627,
+      "public_test": {
+        "n": 300,
+        "accuracy": 0.5866666666666667,
+        "macro_f1": 0.577370853057586,
+        "c_recall": 0.72,
+        "c_precision": 0.6990291262135923,
+        "c_specificity": 0.845,
+        "c_f1": 0.7093596059113301,
+        "confusion_matrix": [
+          [
+            69,
+            23,
+            8
+          ],
+          [
+            42,
+            35,
+            23
+          ],
+          [
+            9,
+            19,
+            72
+          ]
+        ],
+        "per_class": {
+          "A": {
+            "precision": 0.575,
+            "recall": 0.69,
+            "f1": 0.6272727272727273,
+            "support": 100,
+            "auc": 0.78365
+          },
+          "B": {
+            "precision": 0.45454545454545453,
+            "recall": 0.35,
+            "f1": 0.3954802259887006,
+            "support": 100,
+            "auc": 0.6543
+          },
+          "C": {
+            "precision": 0.6990291262135923,
+            "recall": 0.72,
+            "f1": 0.7093596059113301,
+            "support": 100,
+            "auc": 0.866
+          }
+        }
+      }
+    },
+    "small_cnn": {
+      "oof": {
+        "n": 1200,
+        "accuracy": 0.6516666666666666,
+        "macro_f1": 0.6449162064417052,
+        "c_recall": 0.7425,
+        "c_precision": 0.7962466487935657,
+        "c_specificity": 0.905,
+        "c_f1": 0.7684346701164295,
+        "confusion_matrix": [
+          [
+            315,
+            82,
+            3
+          ],
+          [
+            157,
+            170,
+            73
+          ],
+          [
+            40,
+            63,
+            297
+          ]
+        ],
+        "per_class": {
+          "A": {
+            "precision": 0.615234375,
+            "recall": 0.7875,
+            "f1": 0.6907894736842105,
+            "support": 400,
+            "auc": 0.8525937499999999
+          },
+          "B": {
+            "precision": 0.5396825396825397,
+            "recall": 0.425,
+            "f1": 0.4755244755244755,
+            "support": 400,
+            "auc": 0.720171875
+          },
+          "C": {
+            "precision": 0.7962466487935657,
+            "recall": 0.7425,
+            "f1": 0.7684346701164295,
+            "support": 400,
+            "auc": 0.8900406249999999
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "fold": 1,
+          "best_epoch": 45,
+          "validation_loss": 0.7010157664616903,
+          "checkpoint_sha256": "158de45754a7b62c95b8341d364081ab96362a321064ee3983e41563e663bed3"
+        },
+        {
+          "fold": 2,
+          "best_epoch": 43,
+          "validation_loss": 0.7540992856025696,
+          "checkpoint_sha256": "d9aeaff0ccf4b991da36da0a8b493494e2196a8cf1c8d2e58f8c1bd51e63aa4f"
+        },
+        {
+          "fold": 3,
+          "best_epoch": 46,
+          "validation_loss": 0.7227981587251028,
+          "checkpoint_sha256": "3b8c9d53e68003e0e5b3a755478a31f5f0c9235b51e686c5941e87cde05e8127"
+        },
+        {
+          "fold": 4,
+          "best_epoch": 47,
+          "validation_loss": 0.7330038507779439,
+          "checkpoint_sha256": "3a678f97f058a647157feb6a4623beb096963e70fe10f49f6a06ba563b94ee6f"
+        },
+        {
+          "fold": 5,
+          "best_epoch": 39,
+          "validation_loss": 0.7872111399968466,
+          "checkpoint_sha256": "377c39ea35234aed3c3f3962bb20577749f52b351bd0dc940375759b287f0482"
+        }
+      ],
+      "parameters": 155283,
+      "public_test": {
+        "n": 300,
+        "accuracy": 0.6866666666666666,
+        "macro_f1": 0.6781075465583958,
+        "c_recall": 0.81,
+        "c_precision": 0.801980198019802,
+        "c_specificity": 0.9,
+        "c_f1": 0.8059701492537313,
+        "confusion_matrix": [
+          [
+            80,
+            17,
+            3
+          ],
+          [
+            38,
+            45,
+            17
+          ],
+          [
+            7,
+            12,
+            81
+          ]
+        ],
+        "per_class": {
+          "A": {
+            "precision": 0.64,
+            "recall": 0.8,
+            "f1": 0.7111111111111111,
+            "support": 100,
+            "auc": 0.85205
+          },
+          "B": {
+            "precision": 0.6081081081081081,
+            "recall": 0.45,
+            "f1": 0.5172413793103449,
+            "support": 100,
+            "auc": 0.724
+          },
+          "C": {
+            "precision": 0.801980198019802,
+            "recall": 0.81,
+            "f1": 0.8059701492537313,
+            "support": 100,
+            "auc": 0.91855
+          }
+        }
+      }
+    }
+  }
+}

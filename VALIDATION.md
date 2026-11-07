@@ -1,31 +1,25 @@
-# Package validation
+# Revision package validation
 
-Checks completed on 2026-09-22 using a temporary copy in the existing research
-server Python environment. The temporary directory was removed automatically.
-Original research files, checkpoints, and outputs were not modified.
+The November 7 2026 update was checked without retraining or altering historical
+experiments. The dated September validation is preserved in
+`docs/VALIDATION_20260922.md`.
 
 | Check | Result |
 |---|---|
-| Python syntax and JSON parsing | Passed |
-| Exported source hashes and packaged-file hashes | Passed |
-| Seed-42 reference sample inventory | 1,200 images |
-| Balanced sampling | 8 images per class, 24 per batch; deterministic for a fixed seed |
-| Uniform-margin semi-hard triplet calculation | Finite loss and gradients; invariant to class-name permutation |
-| No eligible triplet | Zero loss |
-| ViT synthetic CPU forward pass | 3 logits, 384-dimensional L2-normalized embedding; no projection head |
-| EfficientNet synthetic CPU forward pass | 3 logits; all model parameters trainable |
-| Trainer, evaluator, locking and summary CLI imports | Passed using `--help` |
-| Three shell launchers | Passed `bash -n` syntax checks |
-| Four public-test metric sets | Recomputed from confusion matrices and matched reference JSON |
-| ROC plotting on historical prediction arrays | Passed; nine AUC values matched manuscript data |
-| Targeted credential and absolute-server-path scan | No matching credentials or server-specific absolute paths found |
+| Forty model–seed probability arrays | 300×3, finite, normalized, shared 300 image IDs and labels |
+| Stored test metrics | All forty confusion matrices and metric sets reproduced |
+| Ensemble construction | Equal-weight Triplet/EfficientNet probabilities verified |
+| Exact primary folds | All fifty folds match shuffled KFold with the recorded seeds; ordered training IDs agree |
+| Reporting tests | Eleven synthetic tests passed |
+| Paired bootstrap | All six aggregate and sixty per-seed intervals match archived results exactly |
+| Exact McNemar | All ten discordant counts, exact p-values and Holm adjustments match |
+| Validation-selected thresholds | All forty thresholds and held-out confusion counts match archived analysis |
+| New training wrapper | Syntax, help, dry runs, invalid-seed rejection and trainer CLI compatibility checked |
+| Training during packaging | Not performed |
 
-## Limits
-
-This was not a fresh dependency installation or full experimental rerun.
-The model tests used synthetic images and `pretrained=False`, so they did not
-download pretrained weights or load trained checkpoints. The ROC check read
-saved prediction arrays only. GPU training, end-to-end dataset training,
-checkpoint inference, and reproducibility on another machine remain untested
-for this packaged copy. The credential scan is a targeted check, not a security
-certification. License and public-release approval are still pending.
+The package is not a fresh-environment or independent full GPU reproduction.
+The current environment snapshot is not proof of the exact historical transitive
+environment. Source snapshots for supplementary workflows require their historical
+dependencies. Targeted credential/path checks do not constitute a security audit.
+Microscopy images, weights, manuscript drafts and reviewer correspondence are
+excluded. Review access and licensing remain author responsibilities.

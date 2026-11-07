@@ -1,0 +1,454 @@
+{
+  "rows": [
+    {
+      "seed": 70384,
+      "model": "EfficientNetV2-S matched recipe",
+      "metrics": {
+        "evaluated_samples": 300,
+        "accuracy": 0.7033333333333334,
+        "macro_f1": 0.7046556198009227,
+        "c_recall": 0.79,
+        "c_precision": 0.8494623655913979,
+        "c_specificity": 0.93,
+        "c_to_a": 6,
+        "c_to_b": 15,
+        "a_to_c": 1,
+        "severe_a_c_errors": 7,
+        "ordinal_mae": 0.32,
+        "quadratic_weighted_kappa": 0.725,
+        "roc_auc_ovr": {
+          "A": 0.8835000000000001,
+          "B": 0.7796,
+          "C": 0.94665
+        },
+        "confusion_matrix": [
+          [
+            73,
+            26,
+            1
+          ],
+          [
+            28,
+            59,
+            13
+          ],
+          [
+            6,
+            15,
+            79
+          ]
+        ],
+        "c_f1": 0.8186528497409327
+      }
+    },
+    {
+      "seed": 70384,
+      "model": "CE-only ViT",
+      "metrics": {
+        "evaluated_samples": 300,
+        "accuracy": 0.7133333333333334,
+        "macro_f1": 0.7150543578404275,
+        "c_recall": 0.77,
+        "c_precision": 0.8651685393258427,
+        "c_specificity": 0.94,
+        "c_to_a": 5,
+        "c_to_b": 18,
+        "a_to_c": 0,
+        "severe_a_c_errors": 5,
+        "ordinal_mae": 0.30333333333333334,
+        "quadratic_weighted_kappa": 0.7468671679197996,
+        "roc_auc_ovr": {
+          "A": 0.8968999999999999,
+          "B": 0.79385,
+          "C": 0.9555
+        },
+        "confusion_matrix": [
+          [
+            77,
+            23,
+            0
+          ],
+          [
+            28,
+            60,
+            12
+          ],
+          [
+            5,
+            18,
+            77
+          ]
+        ],
+        "c_f1": 0.8148148148148148
+      }
+    },
+    {
+      "seed": 70384,
+      "model": "Triplet-ViT",
+      "metrics": {
+        "evaluated_samples": 300,
+        "accuracy": 0.69,
+        "macro_f1": 0.6884888094631947,
+        "c_recall": 0.83,
+        "c_precision": 0.7980769230769231,
+        "c_specificity": 0.895,
+        "c_to_a": 4,
+        "c_to_b": 13,
+        "a_to_c": 0,
+        "severe_a_c_errors": 4,
+        "ordinal_mae": 0.3233333333333333,
+        "quadratic_weighted_kappa": 0.739454094292804,
+        "roc_auc_ovr": {
+          "A": 0.8967,
+          "B": 0.79155,
+          "C": 0.95195
+        },
+        "confusion_matrix": [
+          [
+            70,
+            30,
+            0
+          ],
+          [
+            25,
+            54,
+            21
+          ],
+          [
+            4,
+            13,
+            83
+          ]
+        ],
+        "c_f1": 0.8137254901960785
+      }
+    },
+    {
+      "seed": 12731,
+      "model": "EfficientNetV2-S matched recipe",
+      "metrics": {
+        "evaluated_samples": 300,
+        "accuracy": 0.71,
+        "macro_f1": 0.7109193017844494,
+        "c_recall": 0.82,
+        "c_precision": 0.8723404255319149,
+        "c_specificity": 0.94,
+        "c_to_a": 6,
+        "c_to_b": 12,
+        "a_to_c": 0,
+        "severe_a_c_errors": 6,
+        "ordinal_mae": 0.31,
+        "quadratic_weighted_kappa": 0.739454094292804,
+        "roc_auc_ovr": {
+          "A": 0.88425,
+          "B": 0.7749499999999999,
+          "C": 0.9517500000000001
+        },
+        "confusion_matrix": [
+          [
+            73,
+            27,
+            0
+          ],
+          [
+            30,
+            58,
+            12
+          ],
+          [
+            6,
+            12,
+            82
+          ]
+        ],
+        "c_f1": 0.8453608247422681
+      }
+    },
+    {
+      "seed": 12731,
+      "model": "CE-only ViT",
+      "metrics": {
+        "evaluated_samples": 300,
+        "accuracy": 0.6966666666666667,
+        "macro_f1": 0.6974811288964547,
+        "c_recall": 0.79,
+        "c_precision": 0.8494623655913979,
+        "c_specificity": 0.93,
+        "c_to_a": 5,
+        "c_to_b": 16,
+        "a_to_c": 0,
+        "severe_a_c_errors": 5,
+        "ordinal_mae": 0.32,
+        "quadratic_weighted_kappa": 0.736318407960199,
+        "roc_auc_ovr": {
+          "A": 0.88745,
+          "B": 0.7739,
+          "C": 0.94485
+        },
+        "confusion_matrix": [
+          [
+            74,
+            26,
+            0
+          ],
+          [
+            30,
+            56,
+            14
+          ],
+          [
+            5,
+            16,
+            79
+          ]
+        ],
+        "c_f1": 0.8186528497409327
+      }
+    },
+    {
+      "seed": 12731,
+      "model": "Triplet-ViT",
+      "metrics": {
+        "evaluated_samples": 300,
+        "accuracy": 0.7,
+        "macro_f1": 0.7014429377858536,
+        "c_recall": 0.81,
+        "c_precision": 0.84375,
+        "c_specificity": 0.925,
+        "c_to_a": 5,
+        "c_to_b": 14,
+        "a_to_c": 0,
+        "severe_a_c_errors": 5,
+        "ordinal_mae": 0.31666666666666665,
+        "quadratic_weighted_kappa": 0.7355163727959697,
+        "roc_auc_ovr": {
+          "A": 0.8895,
+          "B": 0.7802,
+          "C": 0.9499
+        },
+        "confusion_matrix": [
+          [
+            70,
+            30,
+            0
+          ],
+          [
+            26,
+            59,
+            15
+          ],
+          [
+            5,
+            14,
+            81
+          ]
+        ],
+        "c_f1": 0.826530612244898
+      }
+    },
+    {
+      "seed": 76313,
+      "model": "EfficientNetV2-S matched recipe",
+      "metrics": {
+        "evaluated_samples": 300,
+        "accuracy": 0.7133333333333334,
+        "macro_f1": 0.7156688460357509,
+        "c_recall": 0.79,
+        "c_precision": 0.8586956521739131,
+        "c_specificity": 0.935,
+        "c_to_a": 4,
+        "c_to_b": 17,
+        "a_to_c": 1,
+        "severe_a_c_errors": 5,
+        "ordinal_mae": 0.30333333333333334,
+        "quadratic_weighted_kappa": 0.7443037974683544,
+        "roc_auc_ovr": {
+          "A": 0.8890500000000001,
+          "B": 0.7837999999999999,
+          "C": 0.9494499999999999
+        },
+        "confusion_matrix": [
+          [
+            73,
+            26,
+            1
+          ],
+          [
+            26,
+            62,
+            12
+          ],
+          [
+            4,
+            17,
+            79
+          ]
+        ],
+        "c_f1": 0.8229166666666666
+      }
+    },
+    {
+      "seed": 76313,
+      "model": "CE-only ViT",
+      "metrics": {
+        "evaluated_samples": 300,
+        "accuracy": 0.7133333333333334,
+        "macro_f1": 0.7174193073958802,
+        "c_recall": 0.8,
+        "c_precision": 0.8888888888888888,
+        "c_specificity": 0.95,
+        "c_to_a": 3,
+        "c_to_b": 17,
+        "a_to_c": 0,
+        "severe_a_c_errors": 3,
+        "ordinal_mae": 0.2966666666666667,
+        "quadratic_weighted_kappa": 0.7557840616966581,
+        "roc_auc_ovr": {
+          "A": 0.8936999999999999,
+          "B": 0.78265,
+          "C": 0.9470000000000001
+        },
+        "confusion_matrix": [
+          [
+            70,
+            30,
+            0
+          ],
+          [
+            26,
+            64,
+            10
+          ],
+          [
+            3,
+            17,
+            80
+          ]
+        ],
+        "c_f1": 0.8421052631578948
+      }
+    },
+    {
+      "seed": 76313,
+      "model": "Triplet-ViT",
+      "metrics": {
+        "evaluated_samples": 300,
+        "accuracy": 0.6966666666666667,
+        "macro_f1": 0.7009857524342779,
+        "c_recall": 0.78,
+        "c_precision": 0.8666666666666667,
+        "c_specificity": 0.94,
+        "c_to_a": 4,
+        "c_to_b": 18,
+        "a_to_c": 0,
+        "severe_a_c_errors": 4,
+        "ordinal_mae": 0.31666666666666665,
+        "quadratic_weighted_kappa": 0.7338501291989664,
+        "roc_auc_ovr": {
+          "A": 0.90065,
+          "B": 0.7988500000000001,
+          "C": 0.9506
+        },
+        "confusion_matrix": [
+          [
+            68,
+            32,
+            0
+          ],
+          [
+            25,
+            63,
+            12
+          ],
+          [
+            4,
+            18,
+            78
+          ]
+        ],
+        "c_f1": 0.8210526315789474
+      }
+    }
+  ],
+  "summary_percent": {
+    "CE-only ViT": {
+      "accuracy": {
+        "mean": 70.77777777777779,
+        "sd": 0.962250448649379
+      },
+      "macro_f1": {
+        "mean": 70.99849313775876,
+        "sd": 1.089298186748449
+      },
+      "c_recall": {
+        "mean": 78.66666666666667,
+        "sd": 1.5275252316519468
+      },
+      "c_precision": {
+        "mean": 86.783993126871,
+        "sd": 1.9848549972635547
+      },
+      "c_specificity": {
+        "mean": 94.0,
+        "sd": 1.0
+      },
+      "c_f1": {
+        "mean": 82.51909759045475,
+        "sd": 1.4773370062043627
+      }
+    },
+    "EfficientNetV2-S matched recipe": {
+      "accuracy": {
+        "mean": 70.8888888888889,
+        "sd": 0.5091750772173145
+      },
+      "macro_f1": {
+        "mean": 71.0414589207041,
+        "sd": 0.5523933301029479
+      },
+      "c_recall": {
+        "mean": 80.0,
+        "sd": 1.7320508075688772
+      },
+      "c_precision": {
+        "mean": 86.0166147765742,
+        "sd": 1.150969915439428
+      },
+      "c_specificity": {
+        "mean": 93.5,
+        "sd": 0.5
+      },
+      "c_f1": {
+        "mean": 82.89767803832892,
+        "sd": 1.4348265256182984
+      }
+    },
+    "Triplet-ViT": {
+      "accuracy": {
+        "mean": 69.55555555555556,
+        "sd": 0.5091750772173161
+      },
+      "macro_f1": {
+        "mean": 69.69724998944422,
+        "sd": 0.7350646713817276
+      },
+      "c_recall": {
+        "mean": 80.66666666666667,
+        "sd": 2.5166114784235836
+      },
+      "c_precision": {
+        "mean": 83.616452991453,
+        "sd": 3.491837265308717
+      },
+      "c_specificity": {
+        "mean": 92.0,
+        "sd": 2.29128784747792
+      },
+      "c_f1": {
+        "mean": 82.0436244673308,
+        "sd": 0.64247752711183
+      }
+    }
+  },
+  "notes": "Original architecture-specific heads retained. Shared training recipe. Selection: max macro-F1, lower objective-specific total validation loss on ties; total loss equals CE for CE-only ViT and EfficientNet, CE+weighted triplet for Triplet-ViT. No test tuning or t-tests."
+}

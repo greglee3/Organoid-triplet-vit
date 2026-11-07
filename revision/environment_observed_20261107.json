@@ -1,0 +1,140 @@
+{
+  "observed_on": "2026-11-07",
+  "python": "3.10.12",
+  "torch_cuda": "12.4",
+  "packages": {
+    "Jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3",
+    "PyYAML": "6.0.3",
+    "anyio": "4.14.2",
+    "autocommand": "2.2.2",
+    "backports.tarfile": "1.2.0",
+    "certifi": "2026.7.22",
+    "click": "8.4.2",
+    "contourpy": "1.3.2",
+    "cycler": "0.12.1",
+    "exceptiongroup": "1.3.1",
+    "filelock": "3.29.0",
+    "fonttools": "4.63.0",
+    "fsspec": "2026.4.0",
+    "h11": "0.16.0",
+    "hf-xet": "1.5.2",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "huggingface_hub": "1.25.1",
+    "idna": "3.18",
+    "importlib_metadata": "8.7.1",
+    "jaraco.context": "6.1.0",
+    "jaraco.functools": "4.4.0",
+    "jaraco.text": "4.0.0",
+    "joblib": "1.5.3",
+    "kiwisolver": "1.5.0",
+    "matplotlib": "3.10.9",
+    "more-itertools": "10.8.0",
+    "mpmath": "1.3.0",
+    "networkx": "3.4.2",
+    "numpy": "2.2.6",
+    "nvidia-cublas-cu12": "12.4.5.8",
+    "nvidia-cuda-cupti-cu12": "12.4.127",
+    "nvidia-cuda-nvrtc-cu12": "12.4.127",
+    "nvidia-cuda-runtime-cu12": "12.4.127",
+    "nvidia-cudnn-cu12": "9.1.0.70",
+    "nvidia-cufft-cu12": "11.2.1.3",
+    "nvidia-curand-cu12": "10.3.5.147",
+    "nvidia-cusolver-cu12": "11.6.1.9",
+    "nvidia-cusparse-cu12": "12.3.1.170",
+    "nvidia-cusparselt-cu12": "0.6.2",
+    "nvidia-nccl-cu12": "2.21.5",
+    "nvidia-nvjitlink-cu12": "12.4.127",
+    "nvidia-nvtx-cu12": "12.4.127",
+    "packaging": "26.2",
+    "pillow": "12.2.0",
+    "pip": "26.1.2",
+    "platformdirs": "4.4.0",
+    "pyparsing": "3.3.2",
+    "python-dateutil": "2.9.0.post0",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.15.3",
+    "setuptools": "83.0.0",
+    "six": "1.17.0",
+    "sympy": "1.13.1",
+    "threadpoolctl": "3.6.0",
+    "timm": "0.6.13",
+    "tomli": "2.4.0",
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "tqdm": "4.70.0",
+    "triton": "3.2.0",
+    "typing_extensions": "4.15.0",
+    "wheel": "0.46.3",
+    "zipp": "3.23.0"
+  },
+  "models": {
+    "vit_small_patch16_224": {
+      "default_config": {
+        "url": "https://storage.googleapis.com/vit_models/augreg/S_16-i21k-300ep-lr_0.001-aug_light1-wd_0.03-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.03-res_224.npz",
+        "num_classes": 1000,
+        "input_size": [
+          3,
+          224,
+          224
+        ],
+        "pool_size": null,
+        "crop_pct": 0.9,
+        "interpolation": "bicubic",
+        "fixed_input_size": true,
+        "mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "first_conv": "patch_embed.proj",
+        "classifier": "head"
+      },
+      "cached_weight_filename": "S_16-i21k-300ep-lr_0.001-aug_light1-wd_0.03-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.03-res_224.npz",
+      "cached_weight_sha256": "545815b4e770d2fa6ca4b3ccba7c16b035e474354e52d17ca197ea4efecbf4d3"
+    },
+    "tf_efficientnetv2_s": {
+      "default_config": {
+        "url": "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-effv2-weights/tf_efficientnetv2_s-eb54923e.pth",
+        "num_classes": 1000,
+        "input_size": [
+          3,
+          300,
+          300
+        ],
+        "pool_size": [
+          10,
+          10
+        ],
+        "crop_pct": 1.0,
+        "interpolation": "bicubic",
+        "mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "first_conv": "conv_stem",
+        "classifier": "classifier",
+        "test_input_size": [
+          3,
+          384,
+          384
+        ]
+      },
+      "cached_weight_filename": "tf_efficientnetv2_s-eb54923e.pth",
+      "cached_weight_sha256": "eb54923e44978b92563d63bb0282b61768b1029a334b845fbeead6ea4e731865"
+    }
+  },
+  "scope": "Current environment and cached weights; not proof of an immutable training-time environment"
+}

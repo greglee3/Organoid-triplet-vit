@@ -1,0 +1,81 @@
+{
+  "protocol": {
+    "seed": 4242,
+    "folds": 3,
+    "epochs": 20,
+    "lambda_triplet": 0.0025,
+    "lr": 3e-05,
+    "weight_decay": 0.01,
+    "scheduler": "warmup_2_then_cosine",
+    "mining": "semi-hard",
+    "augmentation": "paper",
+    "test_status": "NOT_ACCESSED"
+  },
+  "rows": [
+    {
+      "margin": 0.025,
+      "accuracy": 0.6933333333333334,
+      "macro_f1": 0.6934046892856364,
+      "delta_f1_vs_ce": -0.0019795238664659376,
+      "c_recall": 0.7725,
+      "c_precision": 0.8328840970350404,
+      "c_specificity": 0.9225,
+      "c_to_a": 21,
+      "c_to_b": 70,
+      "silhouette": 0.10488504668076833,
+      "gap": 0.12832324703534445,
+      "eligible": true
+    },
+    {
+      "margin": 0.05,
+      "accuracy": 0.6908333333333333,
+      "macro_f1": 0.6909506023987818,
+      "delta_f1_vs_ce": -0.004433610753320494,
+      "c_recall": 0.805,
+      "c_precision": 0.8363636363636363,
+      "c_specificity": 0.92125,
+      "c_to_a": 17,
+      "c_to_b": 61,
+      "silhouette": 0.10896790275971095,
+      "gap": 0.13982412219047546,
+      "eligible": true
+    },
+    {
+      "margin": 0.1,
+      "accuracy": 0.6991666666666667,
+      "macro_f1": 0.6983618311965188,
+      "delta_f1_vs_ce": 0.002977618044416541,
+      "c_recall": 0.79,
+      "c_precision": 0.8471849865951743,
+      "c_specificity": 0.92875,
+      "c_to_a": 21,
+      "c_to_b": 63,
+      "silhouette": 0.11519027749697368,
+      "gap": 0.14999179045359293,
+      "eligible": true
+    },
+    {
+      "margin": 0.2,
+      "accuracy": 0.7008333333333333,
+      "macro_f1": 0.7007053435430812,
+      "delta_f1_vs_ce": 0.005321130390978923,
+      "c_recall": 0.815,
+      "c_precision": 0.8402061855670103,
+      "c_specificity": 0.9225,
+      "c_to_a": 18,
+      "c_to_b": 56,
+      "silhouette": 0.11441699415445328,
+      "gap": 0.15158605575561523,
+      "eligible": true
+    }
+  ],
+  "selected_margin": 0.2,
+  "selection_rule": [
+    "C specificity >= 90%",
+    "C recall drop versus CE <= 2 pp",
+    "C precision drop versus CE <= 3 pp",
+    "maximize Macro-F1",
+    "tie: C recall, C->A, then proximity to original margin 0.05"
+  ],
+  "next_action": "confirm the selected margin on independent seeds"
+}

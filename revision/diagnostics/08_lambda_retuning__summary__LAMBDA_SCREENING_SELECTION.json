@@ -1,0 +1,110 @@
+{
+  "protocol": {
+    "seed": 4242,
+    "folds": 3,
+    "epochs": 20,
+    "lr": 3e-05,
+    "weight_decay": 0.01,
+    "scheduler": "warmup_2_then_cosine",
+    "mining": "semi-hard",
+    "margin": 0.05,
+    "augmentation": "paper",
+    "test_status": "NOT_ACCESSED"
+  },
+  "rows": [
+    {
+      "lambda": 0.0,
+      "accuracy": 0.6975,
+      "macro_f1": 0.6953842131521023,
+      "delta_f1_vs_ce": 0.0,
+      "c_recall": 0.7775,
+      "c_precision": 0.8567493112947658,
+      "c_specificity": 0.935,
+      "c_to_a": 23,
+      "c_to_b": 66,
+      "silhouette": 0.10815562059481938,
+      "gap": 0.1450342039267222,
+      "eligible": false
+    },
+    {
+      "lambda": 0.0005,
+      "accuracy": 0.6975,
+      "macro_f1": 0.697648439106735,
+      "delta_f1_vs_ce": 0.002264225954632715,
+      "c_recall": 0.7475,
+      "c_precision": 0.861671469740634,
+      "c_specificity": 0.94,
+      "c_to_a": 25,
+      "c_to_b": 76,
+      "silhouette": 0.09721888353427251,
+      "gap": 0.11213258902231853,
+      "eligible": false
+    },
+    {
+      "lambda": 0.001,
+      "accuracy": 0.6958333333333333,
+      "macro_f1": 0.6948441558441557,
+      "delta_f1_vs_ce": -0.0005400573079465953,
+      "c_recall": 0.7425,
+      "c_precision": 0.8485714285714285,
+      "c_specificity": 0.93375,
+      "c_to_a": 25,
+      "c_to_b": 78,
+      "silhouette": 0.10016808907190959,
+      "gap": 0.11739983161290486,
+      "eligible": false
+    },
+    {
+      "lambda": 0.0025,
+      "accuracy": 0.6908333333333333,
+      "macro_f1": 0.6909506023987818,
+      "delta_f1_vs_ce": -0.004433610753320494,
+      "c_recall": 0.805,
+      "c_precision": 0.8363636363636363,
+      "c_specificity": 0.92125,
+      "c_to_a": 17,
+      "c_to_b": 61,
+      "silhouette": 0.10896790275971095,
+      "gap": 0.13982412219047546,
+      "eligible": true
+    },
+    {
+      "lambda": 0.005,
+      "accuracy": 0.6941666666666667,
+      "macro_f1": 0.6925787700897471,
+      "delta_f1_vs_ce": -0.002805443062355195,
+      "c_recall": 0.7625,
+      "c_precision": 0.8402203856749312,
+      "c_specificity": 0.9275,
+      "c_to_a": 23,
+      "c_to_b": 72,
+      "silhouette": 0.10163495192925136,
+      "gap": 0.12194882333278656,
+      "eligible": true
+    },
+    {
+      "lambda": 0.01,
+      "accuracy": 0.6975,
+      "macro_f1": 0.6934268913808556,
+      "delta_f1_vs_ce": -0.001957321771246745,
+      "c_recall": 0.7925,
+      "c_precision": 0.8342105263157895,
+      "c_specificity": 0.92125,
+      "c_to_a": 24,
+      "c_to_b": 59,
+      "silhouette": 0.11603877941767375,
+      "gap": 0.16186590989430746,
+      "eligible": true
+    }
+  ],
+  "selected_lambda": 0.005,
+  "boundary_selected": false,
+  "selection_rule": [
+    "C specificity >= 90%",
+    "C recall drop versus CE <= 2 pp",
+    "C precision drop versus CE <= 3 pp",
+    "highest Macro-F1",
+    "within 0.2 pp choose smaller lambda"
+  ],
+  "next_action": "confirm selected lambda on independent seeds"
+}

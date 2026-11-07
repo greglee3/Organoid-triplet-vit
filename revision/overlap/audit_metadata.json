@@ -1,0 +1,14 @@
+{
+  "analysis": "read-only dataset integrity audit",
+  "zip": "data/Asano_Full_Data.zip",
+  "images": 1500,
+  "model_training": false,
+  "model_test_evaluation": false,
+  "test_images_read_for_integrity_audit": true,
+  "near_duplicate_thresholds": {
+    "strict_phash_and_dhash_max": 4,
+    "strict_correlation_min": 0.995,
+    "review_phash_and_dhash_max": 8,
+    "review_correlation_min": 0.98
+  }
+}

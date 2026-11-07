@@ -1,0 +1,22 @@
+{
+  "status": "multiseed_complete",
+  "updated_at_unix": 1786992775.8171666,
+  "test_status": "NOT_ACCESSED",
+  "selected_lambda": 0.005,
+  "aggregates": {
+    "triplet_accuracy_mean": 0.7069444444444445,
+    "triplet_accuracy_sd": 0.008988160937424149,
+    "triplet_macro_f1_mean": 0.70761378430197,
+    "triplet_macro_f1_sd": 0.008312087114561776,
+    "delta_f1_mean": -0.0008857458256104437,
+    "delta_f1_sd": 0.004027223500006706,
+    "triplet_c_recall_mean": 0.8175,
+    "triplet_c_recall_sd": 0.0,
+    "triplet_c_precision_mean": 0.8435691379264885,
+    "triplet_c_precision_sd": 0.008772648669590854,
+    "triplet_c_specificity_mean": 0.9241666666666667,
+    "triplet_c_specificity_sd": 0.0050518148554092365,
+    "positive_delta_seeds": 1,
+    "eligible_all_seeds": true
+  }
+}
